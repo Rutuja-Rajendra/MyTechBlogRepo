@@ -12,6 +12,14 @@ public class User {
 	private String gender;
 	private String about;
 	private Timestamp reg_date = Timestamp.from(Instant.now());
+	private String profile;
+	
+	public String getProfile() {
+		return profile;
+	}
+	public void setProfile(String profile) {
+		this.profile = profile;
+	}
 	public int getId() {
 		return id;
 	}
@@ -63,13 +71,14 @@ public class User {
 		this.gender = gender;
 		this.about = about;
 	}
-	public User(String username, String email, String password, String gender, String about) {
+	public User(String username, String email, String password, String gender, String about, String profile) {
 		super();
 		this.username = username;
 		this.email = email;
 		this.password = password;
 		this.gender = gender;
 		this.about = about;
+		this.profile = profile;
 	}
 	public User() {
 		super();
